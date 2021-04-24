@@ -1,0 +1,87 @@
+@media screen and (min-width: 1024px) {
+    .body-dark {
+        .main-creargifo {
+            .ilus-grabar-contenedor {
+                .div-grabacion {
+                    .recuadro-grabacion {
+                        border: 1px solid $blanco;
+
+                        .video-contenedor {
+                            #titulo-grabargifo {
+                                color: $blanco;
+
+                                .gifos-crear {
+                                    color: $turquesa;
+                                }
+                            }
+
+                            #texto-grabargifo {
+                                color: $blanco;
+                            }
+
+                            .overlay-video {
+                                display: none;
+
+                                background-color: $violeta-op2;
+
+                                #overlay-video-actions {
+                                    #btn-creargifo-descargar {
+                                        background-color: $blanco-op;
+                                    }
+
+                                    #btn-creargifo-descargar:hover {
+                                        background-color: $blanco;
+                                    }
+
+                                    #btn-creargifo-link {
+                                        background-color: $blanco-op;
+                                    }
+
+                                    #btn-creargifo-link:hover {
+                                        background-color: $blanco;
+                                    }
+                                }
+
+                                #overlay-video-textos {
+                                    #overlay-video-parrafo {
+                                        color: $blanco;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div {
+                        .crear-pasos {
+                            p {
+                                border: 1px solid $blanco;
+
+                                color: $blanco;
+                            }
+
+                            .paso-activo {
+                                background-color: $blanco;
+                                color: $violeta;
+                            }
+                        }
+
+                        .contador-contenedor {
+                            #contador-grabacion {
+                                color: $blanco;
+                            }
+
+                            #contador-repetircaptura {
+                                color: $blanco;
+                                border-bottom: 2px solid $gris-trending-oscuro;
+                            }
+
+                            #contador-repetircaptura:hover {
+                                border-bottom: 2px solid $turquesa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

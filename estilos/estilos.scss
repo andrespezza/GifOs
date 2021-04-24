@@ -1,0 +1,29 @@
+@import "generales/variables";
+@import "generales/mixins";
+
+@import "generales/navbar";
+@import "generales/footer";
+@import "generales/modal";
+
+@import "home/main";
+@import "home/trending";
+
+@import "favoritos/main";
+
+@import "misgifos/main";
+
+@import "creargifo/main";
+
+@import "nocturno/navbar";
+@import "nocturno/footer";
+@import "nocturno/home";
+@import "nocturno/favoritos";
+@import "nocturno/misgifos";
+@import "nocturno/creargifo";
+@import "nocturno/modal";
+
+* {
+    margin: auto 0;
+    padding: 0;
+    box-sizing: border-box;
+}

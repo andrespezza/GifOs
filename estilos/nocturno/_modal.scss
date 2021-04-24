@@ -1,0 +1,18 @@
+//modal maximizar gif
+.body-dark {
+    .modal-activado {
+        background-color: $negro-modal;
+
+        .modal-bar {
+            .modal-textos {
+                .modal-user {
+                    color: $blanco;
+                }
+
+                .modal-titulo {
+                    color: $blanco;
+                }
+            }
+        }
+    }
+}

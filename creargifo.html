@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <title>GIFOS</title>
+</head>
+
+<body id="body">
+
+    <header>
+
+        <div class="linea-violeta"></div>
+
+        <div class="navbar">
+
+            <a href="index.html"> <img src="./assets/logo-mobile.svg" alt="Logo" id="logo"></a>
+            <a href="index.html"> <img src="./assets/logo-desktop.svg" alt="Logo" id="logo-desktop"></a>
+
+            <nav>
+                <div class="menu">
+                    <input type="checkbox" id="checkbox" />
+
+                    <label for="checkbox" id="icon-hamburguesa">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                    </label>
+
+                    <ul id="ul-menu">
+                        <li><a href="#" id="menu-modo" class="menu-items">Modo nocturno</a></li>
+                        <li><a href="favoritos.html" class="menu-items">Favoritos</a></li>
+                        <li><a href="misgifos.html" class="menu-items">Mis GIFOS</a></li>
+                        <li><a href="creargifo.html" class="menu-creargifo">
+                                <img src="./assets/button-crear-gifo.svg" alt="Crear Gifo" class="mas-violeta">
+                                <img src="./assets/button-crear-gifo-hover.svg" alt="Crear Gifo" class="mas-blanco">
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="main-mobile">
+
+            <h2>Entrá a esta página desde una computadora con cámara y crea tus propios <span class="gifos-turquesa">GIFOS!</span></h2>
+
+        </section>
+
+        <section class="main-creargifo">
+
+            <div class="ilus-grabar-contenedor">
+
+                <div class="div-camara">
+                    <img src="./assets/camara.svg" alt="camara" id="camara-ilustracion">
+                    <img src="./assets/element-luz-camara.svg" alt="luz camara" id="luz-camara">
+                </div>
+
+                <div class="div-grabacion">
+                    <div class="recuadro-grabacion">
+
+                        <div class="esquina1"></div>
+                        <div class="esquina2"></div>
+                        <div class="esquina3"></div>
+                        <div class="esquina4"></div>
+
+                        <div class="video-contenedor">
+
+                            <h2 id="titulo-grabargifo">Aquí podrás </br>crear tus propios <span
+                                    class="gifos-crear">GIFOS</span></h2>
+                            <p id="texto-grabargifo">¡Crea tu GIFO en sólo 3 pasos!</br>
+                                (sólo necesitas una cámara para grabar un video)</p>
+
+                            <div class="overlay-video" id="overlay-video">
+
+                                <div id="overlay-video-actions">
+                                </div>
+
+                                <div id="overlay-video-textos">
+                                    <img src="./assets/loader.svg" alt="loading gifo" id="overlay-video-icon">
+                                    <p id="overlay-video-parrafo">Estamos subiendo tu GIFO</p>
+                                </div>
+
+                            </div>
+
+                            <video src="" id="grabacion-video"></video>
+                            <img src="" alt="" id="gif-grabado">
+
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="crear-pasos">
+
+                            <p id="creargifo-pasos-numero">1</p>
+                            <p id="creargifo-pasos-numero">2</p>
+                            <p id="creargifo-pasos-numero">3</p>
+
+                        </div>
+
+                        <div class="contador-contenedor">
+                            <p id="contador-grabacion">0:00:00</p>
+                            <button id="contador-repetircaptura">repetir captura</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-pelicula">
+                    <img src="./assets/pelicula.svg" alt="rollo pelicula" id="pelicula-ilus">
+                </div>
+
+            </div>
+
+            <div class="divisor-creargifo"></div>
+
+            <div class="botones-creargifo-contenedor">
+
+                <button id="btn-creargifo-comenzar" class="btn-generico">comenzar</button>
+                <button id="btn-creargifo-grabar" class="btn-generico">grabar</button>
+                <button id="btn-creargifo-finalizar" class="btn-generico">finalizar</button>
+                <button id="btn-creargifo-subirgifo" class="btn-generico">subir gifo</button>
+
+            </div>
+
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+
+        <div class="datos">
+
+            <div class="footer-redes">
+                <p>Compartir en:</p>
+                <div class="redes-iconos-contenedor">
+
+                    <a href="https://www.facebook.com/" class="redes-icon" target="_blank">
+                        <img src="./assets/icon_facebook.svg" alt="Facebook" class="icon">
+                        <img src="./assets/icon_facebook-hover.svg" alt="Facebook" class="icon-hover">
+                    </a>
+
+                    <a href="https://www.twitter.com/" class="redes-icon" target="_blank">
+                        <img src="./assets/icon-twitter.svg" alt="Twitter" class="icon">
+                        <img src="./assets/icon-twitter-hover.svg" alt="Twitter" class="icon-hover">
+                    </a>
+
+                    <a href="https://www.instagram.com/" class="redes-icon" target="_blank">
+                        <img src="./assets/icon_instagram.svg" alt="Instagram" class="icon">
+                        <img src="./assets/icon_instagram-hover.svg" alt="Instagram" class="icon-hover">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>© GIFOS 2021 All Rights Reserved.</p>
+            </div>
+
+        </div>
+        <div class="linea-violeta"></div>
+
+    </footer>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="./scripts/creargifo.js"></script>
+    <script src="./scripts/modo-nocturno.js"></script>
+</body>

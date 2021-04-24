@@ -1,0 +1,90 @@
+//menu mobile
+
+.body-dark {
+    background-color: $gris-oscuro;
+
+    .linea-violeta {
+        background-color: $negro;
+    }
+
+    header {
+        .navbar {
+            background-color: $gris-oscuro;
+
+            nav {
+                .menu {
+                    ul {
+                        background-color: $negro;
+
+                        li {
+                            .menu-items {
+                                color: $blanco;
+                            }
+                        }
+
+                        li:first-child .menu-items {
+                            padding-top: 0;
+                        }
+                    }
+
+                    label {
+                        span {
+                            background-color: $blanco;
+                        }
+                    }
+
+                    /* lo que pasa cuando apreto el checkbox*/
+
+                    input:checked ~ label span {
+                        background-color: $blanco;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+//menu desktop
+@media screen and (min-width: 1024px) {
+    .body-dark {
+
+        header {
+            .navbar {
+                nav {
+                    .menu {
+                        ul {
+                            li {
+                                .menu-items {
+                                    color: $blanco;
+                                    border-bottom: 2px solid $gris-oscuro;
+                                }
+
+                                .menu-items:hover {
+                                    border-bottom: 2px solid $turquesa;
+                                }
+                                
+                                .menu-creargifo {
+                                    border: 1px solid $blanco;
+                                }
+
+                                .menu-creargifo:hover {
+                                    background-color: $blanco;
+                                }
+
+                                .menu-creargifo:active {
+                                    background-color: $blanco;
+                                }
+                            }
+                        }
+
+                        ul {
+                            background-color: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

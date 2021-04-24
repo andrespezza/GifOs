@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <title>GIFOS</title>
+  </head>
+
+  <body id="body">
+    <header>
+      <div class="linea-violeta"></div>
+
+      <div class="navbar">
+        <a href="index.html">
+          <img src="./assets/logo-mobile.svg" alt="Logo" id="logo"
+        /></a>
+        <a href="index.html">
+          <img src="./assets/logo-desktop.svg" alt="Logo" id="logo-desktop"
+        /></a>
+
+        <nav>
+          <div class="menu">
+            <input type="checkbox" id="checkbox" />
+
+            <label for="checkbox" id="icon-hamburguesa">
+              <span class="span1"></span>
+              <span class="span2"></span>
+              <span class="span3"></span>
+            </label>
+
+            <ul id="ul-menu">
+              <li>
+                <a href="#" id="menu-modo" class="menu-items">Modo nocturno</a>
+              </li>
+              <li><a href="favoritos.html" class="menu-items">Favoritos</a></li>
+              <li><a href="misgifos.html" class="menu-items">Mis GIFOS</a></li>
+              <li>
+                <a href="creargifo.html" class="menu-creargifo">
+                  <img
+                    src="./assets/button-crear-gifo.svg"
+                    alt="Crear Gifo"
+                    class="mas-violeta"
+                  />
+                  <img
+                    src="./assets/button-crear-gifo-hover.svg"
+                    alt="Crear Gifo"
+                    class="mas-blanco"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="main-header">
+        <h1>
+          Inspírate, busca, guarda y crea los mejores
+          <span class="gifos">GIFOS</span>
+        </h1>
+
+        <div class="buscador-contenedor">
+          <img src="./assets/ilustra_header.svg" alt="Ilustración Header" />
+
+          <div id="buscador" class="buscador">
+            <div class="buscador-bloque">
+              <div class="buscador-y-lupa">
+                <img
+                  src="./assets/icon-search-gris.svg"
+                  alt="buscador"
+                  class="buscador-lupa-gris"
+                  id="buscador-lupa-gris"
+                />
+                <input
+                  type="text"
+                  placeholder="Busca GIFOS y más"
+                  id="input-buscador"
+                  class="input-buscador"
+                />
+              </div>
+              <button id="btn-buscador">
+                <img
+                  src="./assets/icon-search.svg"
+                  alt="Buscar"
+                  id="buscador-lupa"
+                  class="icon-lupa-abierta"
+                />
+                <img
+                  src="./assets/button-close.svg"
+                  alt="Cerrar búsqueda"
+                  id="cerrar-busqueda"
+                  class="icon-cerrar-busqueda"
+                />
+              </button>
+            </div>
+
+            <ul class="buscador-sugerencias" id="buscador-sugerencias"></ul>
+          </div>
+        </div>
+
+        <div class="trending-sugerencias">
+          <h3>Trending:</h3>
+          <p id="trending-topics"></p>
+        </div>
+
+        <div
+          id="resultados-busqueda-contenedor"
+          class="resultados-busqueda-contenedor"
+        >
+          <h2 id="titulo-busqueda" class="titulo-busqueda"></h2>
+
+          <div id="resultados-busqueda" class="resultados-busqueda"></div>
+
+          <button id="resultados-vermas" class="btn-generico">ver más</button>
+        </div>
+      </section>
+
+      <section class="trending">
+        <h2>Trending GIFOS</h2>
+        <p class="trending-text">
+          Mira los últimos GIFOS de nuestra comunidad.
+        </p>
+
+        <div class="trending-slider-contenedor">
+          <div class="slider-prev" id="trending-btn-previous">
+            <img
+              src="./assets/button-left.svg"
+              alt="izquierda"
+              class="prev-violeta"
+            />
+            <img
+              src="./assets/button-left-blanco.svg"
+              alt="izquierda"
+              class="prev-blanco"
+            />
+          </div>
+
+          <div class="trending-slider-box">
+            <div class="trending-slider" id="trending-slider"></div>
+          </div>
+
+          <div class="slider-next" id="trending-btn-next">
+            <img
+              src="./assets/button-right.svg"
+              alt="derecha"
+              class="next-violeta"
+            />
+            <img
+              src="./assets/button-right-blanco.svg"
+              alt="derecha"
+              class="next-blanco"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="datos">
+        <div class="footer-redes">
+          <p>Compartir en:</p>
+          <div class="redes-iconos-contenedor">
+            <a
+              href="https://www.facebook.com/"
+              class="redes-icon"
+              target="_blank"
+            >
+              <img
+                src="./assets/icon_facebook.svg"
+                alt="Facebook"
+                class="icon"
+              />
+              <img
+                src="./assets/icon_facebook-hover.svg"
+                alt="Facebook"
+                class="icon-hover"
+              />
+            </a>
+            <a
+              href="https://www.twitter.com/"
+              class="redes-icon"
+              target="_blank"
+            >
+              <img src="./assets/icon-twitter.svg" alt="Twitter" class="icon" />
+              <img
+                src="./assets/icon-twitter-hover.svg"
+                alt="Twitter"
+                class="icon-hover"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              class="redes-icon"
+              target="_blank"
+            >
+              <img
+                src="./assets/icon_instagram.svg"
+                alt="Instagram"
+                class="icon"
+              />
+              <img
+                src="./assets/icon_instagram-hover.svg"
+                alt="Instagram"
+                class="icon-hover"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>© GIFOS 2021 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="linea-violeta"></div>
+    </footer>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/trending-slide.js"></script>
+    <script src="./scripts/modo-nocturno.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+.body-dark {
+
+    .main-header {
+        h1 {
+            color: $blanco;
+    
+            .gifos {
+                color: $turquesa;
+            }
+        }
+        .buscador-contenedor {
+            .buscador {
+                border: 1px solid $blanco;
+
+                .buscador-bloque {
+                    .buscador-y-lupa {
+                        .input-buscador {
+                            color: $blanco;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    //busqueda
+    .buscador-activo {
+        border: 1px solid $blanco;
+        
+        .buscador-bloque {
+            .buscador-y-lupa {
+                
+    
+                .input-buscador {
+                    color: $blanco;
+                    background-color: unset;
+                }
+            }
+        }
+    
+        .buscador-sugerencias { 
+            border-top: 1px solid $blanco;
+        }
+    }
+
+    .trending-sugerencias {
+        h3 {
+            color: $blanco;
+        }
+    
+        #trending-topics {
+            color: $blanco;
+        }
+    }
+
+    .titulo-busqueda {
+        color: $blanco;
+    }
+
+    .btn-generico {
+        color: $blanco;
+        border: 1px solid $blanco;
+    }
+
+    .btn-generico:hover {
+        background-color: $blanco;
+        color: $violeta;
+    }
+
+    //seccion trending
+    .trending {
+        background-color: $gris-trending-oscuro;
+    
+        h2 {
+            color: $blanco;
+        }
+    
+        p {
+            color: $blanco;
+        }
+    }
+}

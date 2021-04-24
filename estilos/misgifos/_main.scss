@@ -1,0 +1,197 @@
+.header-misgifos {
+    margin-top: 5px;
+    text-align: center;
+
+    img {
+        width: 28px;
+    }
+
+    h1 {
+        @include titulos;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 7px;
+    }
+}
+
+#misgifos-vacio {
+    text-align: center;
+    margin-top: 40px;
+    display: none;
+
+    img {
+        width: 120px;
+    }
+
+    h3 {
+        @include titulos;
+        color: $turquesa;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 15px;
+        padding: 0 21px;
+    }
+}
+
+#misgifos-creados {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.resultados-misgifos {
+    //el contenedor con las 4 columnas
+    margin: 38px 10px 53px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.resultados-gif-box-misgifos {
+    //la caja con cada gif
+    width: 156px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 25px 10px;
+}
+
+.gif-acciones-resultados-misgifos {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .header-misgifos {
+        margin-top: 11px;
+        h1 {
+            font-size: 25px;
+        }
+    }
+ 
+    #misgifos-vacio {
+        margin-top: 110px;
+        margin-bottom: 136px;
+
+        img {
+            width: 150px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 33px;
+            margin-top: 24px;
+            padding: 0 50px;
+        }
+    }
+
+    .resultados-misgifos {
+        //el contenedor con las 4 columnas
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resultados-gif-box-misgifos {
+        //la caja con cada gif
+        width: 220px;
+        height: 200px;
+        margin: 0 10px 25px 10px;
+    }
+
+    .gif-acciones-resultados-misgifos {
+        position: absolute;
+        z-index: 0;
+        background-color: $violeta-op2;
+        width: 220px;
+        height: 200px;
+    }
+
+    .iconos-acciones-gif {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .iconos-acciones-box {
+        width: 32px;
+        height: 32px;
+        background-color: $blanco-op;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+    }
+
+    .borrar {
+        cursor: pointer;
+    }
+
+    .download {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .max {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .iconos-acciones-box:hover {
+        background-color: $blanco;
+    }
+
+    .textos-descripcion-gif-misgifos {
+        position: absolute;
+        bottom: 30px;
+        left: 18px;
+    }
+
+    .user-gif-misgifos {
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+
+    .titulo-gif-misgifos {
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resultados-gif-box-misgifos:hover .gif-acciones-resultados-misgifos {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .resultados-misgifos {
+        margin: 59px 146px 47px 146px;
+    }
+
+    .resultados-gif-box-misgifos {
+        width: 260px;
+        height: 200px;
+        margin: 0 15px 31px 15px;
+    }
+
+    .gif-acciones-resultados-misgifos {
+        position: absolute;
+        z-index: 0;
+        background-color: $violeta-op2;
+        width: 260px;
+        height: 200px;
+    }
+}

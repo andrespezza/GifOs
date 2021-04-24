@@ -1,0 +1,267 @@
+//menu mobile
+.linea-violeta {
+  height: 5px;
+  background-color: $violeta;
+  width: 100%;
+}
+
+.dark {
+  .linea-violeta {
+    background-color: $negro;
+  }
+}
+
+header {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    padding: 29px 26px 17px 22px;
+
+    #logo {
+      width: 56px;
+    }
+
+    #logo-desktop {
+      display: none;
+    }
+
+    nav {
+      .menu {
+        ul {
+          position: absolute;
+          top: 100px;
+          right: 0px;
+          width: 0px;
+          height: calc(100vh - 100px);
+          padding-left: 0px;
+          padding-top: 32px;
+          overflow: hidden;
+          background-color: $violeta-op;
+          list-style-type: none;
+
+          transition: width 0.3s ease-out;
+
+          li {
+            position: relative;
+
+            .menu-items {
+              display: block;
+              position: relative;
+              padding-bottom: 11px;
+              padding-top: 13px;
+              text-decoration: none;
+              text-align: center;
+              @include menu-mobile;
+              color: $blanco;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: calc(50% - 20.5px);
+              width: 41px;
+              border-bottom: 1px solid $blanco;
+              opacity: 0.5;
+            }
+
+            .menu-creargifo {
+              display: none;
+            }
+          }
+
+          li:first-child a {
+            padding-top: 0;
+          }
+        }
+
+        #checkbox {
+          display: none;
+          z-index: 2;
+          position: absolute;
+          top: 10px;
+          right: 16px;
+          transform: scale(1.5);
+        }
+
+        label {
+          span {
+            display: block;
+            width: 18px;
+            height: 2px;
+
+            position: relative;
+            background-color: $violeta;
+            z-index: 1;
+
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+
+          .span1 {
+            transform-origin: 10% 0%;
+            margin-bottom: 3px;
+            background-color: $violeta;
+          }
+          .span2 {
+            margin-bottom: 3px;
+            background-color: $violeta;
+          }
+          .span3 {
+            transform-origin: 10% 100%;
+            background-color: $violeta;
+          }
+        }
+
+        /* lo que pasa cuando apreto el checkbox*/
+
+        input:checked ~ ul {
+          width: 100%;
+          transition: width 0.3s ease-out;
+        }
+
+        input:checked ~ label .span1 {
+          opacity: 1;
+          transform: rotate(45deg);
+          background-color: $violeta;
+        }
+
+        input:checked ~ label .span2 {
+          opacity: 0;
+        }
+
+        input:checked ~ label .span3 {
+          opacity: 1;
+          transform: rotate(-45deg);
+          background-color: $violeta;
+        }
+      }
+    }
+  }
+}
+
+//menu desktop
+@media screen and (min-width: 1024px) {
+  header {
+    .navbar {
+      height: 90px;
+      padding-top: 18px;
+      padding-left: 50px;
+      padding-right: 50px;
+
+      #logo-desktop {
+        justify-items: left;
+        width: 59px;
+      }
+
+      nav {
+        .menu {
+          ul {
+            display: flex;
+            flex-direction: row;
+
+            position: relative;
+            top: 0px;
+            right: 0px;
+            width: 100%;
+            height: unset;
+            padding-top: 0;
+            background-color: unset;
+
+            li {
+              display: inline-block;
+              padding-top: 0;
+              margin-left: 40px;
+
+              .menu-items {
+                display: block;
+                position: relative;
+                padding-bottom: 1px;
+                padding-top: 3px;
+                border-bottom: 2px solid white;
+                @include menu-desktop;
+                color: $violeta;
+              }
+
+              &::after {
+                display: none;
+              }
+
+              .menu-items:hover {
+                border-bottom: 2px solid $turquesa;
+              }
+
+              .menu-items:active {
+                color: $gris-medio;
+              }
+
+              .menu-creargifo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 54px;
+                width: 54px;
+                padding-top: 0;
+                border-radius: 50%;
+                border: 1px solid $violeta;
+                background-color: unset;
+
+                .mas-violeta {
+                  width: 16px;
+                }
+
+                .mas-blanco {
+                  width: 16px;
+                  display: none;
+                }
+              }
+
+              .menu-creargifo:hover {
+                background-color: $violeta;
+                border-bottom: none;
+
+                .mas-violeta {
+                  display: none;
+                }
+
+                .mas-blanco {
+                  display: block;
+                }
+              }
+
+              .menu-creargifo:active {
+                background-color: $gris-medio;
+              }
+            }
+
+            li:last-child {
+              margin-left: 53px;
+            }
+            li:first-child {
+              padding-top: 3px;
+            }
+          }
+
+          #checkbox {
+            display: none;
+          }
+
+          label {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    .navbar {
+      padding-left: 156px;
+      padding-right: 156px;
+    }
+  }
+}

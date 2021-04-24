@@ -1,0 +1,454 @@
+//estilos seccion busqueda (ilustracion, buscador y trending topics)
+
+.main-header {
+    h1 {
+        @include titulos;
+        font-size: 25px;
+        line-height: 33px;
+
+        padding: 7px 54px 31px 54px;
+
+        .gifos {
+            color: $turquesa;
+        }
+    }
+
+    .buscador-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 273px;
+        }
+
+        .buscador {
+            border: 1px solid $violeta;
+            border-radius: 27px;
+            width: 334px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+
+            .buscador-bloque {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 18px;
+
+                .buscador-y-lupa {
+                    display: flex;
+
+                    .buscador-lupa-gris {
+                        padding-top: 2px;
+                        width: 22px;
+                        opacity: 0;
+                    }
+
+                    .input-buscador {
+                        margin-left: 15px;
+                        border: none;
+                        font-family: $roboto;
+                        color: $gris-medio;
+                        font-size: 16px;
+                        text-align: left;
+                        line-height: 19px;
+                        font-weight: 400;
+                        background-color: unset;
+                    }
+                }
+
+                #btn-buscador {
+                    background-color: unset;
+                    border: none;
+
+                    .icon-lupa-abierta {
+                        padding-top: 3px;
+                        width: 22px;
+                    }
+
+                    .icon-cerrar-busqueda {
+                        display: none;
+                    }
+                }
+            }
+
+            .buscador-sugerencias {
+                display: none;
+            }
+        }
+    }
+}
+
+//clases definidas para el buscador abierto
+.buscador-activo {
+    border: 1px solid $violeta;
+    border-radius: 27px;
+    width: 334px;
+    height: 200px;
+
+    .buscador-bloque {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px;
+
+        .buscador-y-lupa {
+            display: flex;
+
+            .buscador-lupa-gris {
+                padding-top: 2px;
+                width: 22px;
+                opacity: 1;
+            }
+
+            .input-buscador {
+                margin-left: 15px;
+                border: none;
+                font-family: $roboto;
+                color: $negro;
+                font-size: 16px;
+                text-align: left;
+                line-height: 19px;
+                font-weight: 400;
+            }
+        }
+
+        #btn-buscador {
+            background-color: unset;
+            border: none;
+
+            .icon-lupa-abierta {
+                display: none;
+            }
+
+            .icon-cerrar-busqueda {
+                width: 14px;
+            }
+        }
+    }
+
+    .buscador-sugerencias {
+        display: block;
+        margin: 0 18px;
+        border-top: 1px solid grey;
+
+        .sugerencia {
+            display: flex;
+            padding-top: 14px;
+
+            .sugerencia-lupa-gris {
+                width: 16px;
+            }
+
+            .buscador-sugerencia-texto {
+                margin-left: 20px;
+                border: none;
+                font-family: $roboto;
+                color: $gris-medio;
+                font-size: 16px;
+                text-align: left;
+                line-height: 19px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//estilos del parrafo trending topics
+.trending-sugerencias {
+    margin-top: 31px;
+
+    h3 {
+        @include titulos;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #trending-topics {
+        font-family: $montse;
+        color: $violeta;
+        font-size: 14px;
+        text-align: center;
+        line-height: 25px;
+        padding: 3px 85px 0px 85px;
+    }
+}
+
+.trending-topics-link {
+    cursor: pointer;
+}
+
+//estilos de la seccion RESULTADOS BUSQUEDA agregada con js
+.resultados-busqueda-contenedor {
+    //la seccion entera con titulo
+    display: none;
+    position: relative;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.resultados-busqueda-contenedor::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1;
+    left: calc(50% - 78.5px);
+    width: 157px;
+    border-bottom: 1px solid $gris-medio;
+    opacity: 0.5;
+}
+
+.titulo-busqueda {
+    position: relative;
+    padding-top: 43px;
+    @include titulos;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.resultados-busqueda {
+    //el contenedor con las 4 columnas
+    margin: 38px 10px 53px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.resultados-gif-box {
+    //la caja con cada gif
+    width: 156px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 10px 25px 10px;
+}
+
+.gif-acciones-resultados {
+    display: none;
+}
+
+.resultados-gif {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-generico {
+    color: $violeta;
+    background-color: unset;
+    border: 1px solid $violeta;
+    border-radius: 25px;
+    padding: 16px 32px;
+    cursor: pointer;
+    font-family: $montse;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.busqueda-error-contenedor {
+    margin-top: 40px;
+}
+
+.busqueda-error-img {
+    width: 120px;
+}
+
+.busqueda-error-texto {
+    @include titulos;
+    color: $turquesa;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-header {
+        h1 {
+            font-size: 30px;
+            line-height: 35px;
+            padding: 76px 250px 24px 250px;
+        }
+    }
+
+    .resultados-busqueda {
+        //el contenedor con las 4 columnas
+        margin: 38px 10px 53px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resultados-gif-box {
+        //la caja con cada gif
+        width: 220px;
+        height: 200px;
+        margin: 0 10px 25px 10px;
+    }
+
+    .gif-acciones-resultados {
+        position: absolute;
+        z-index: 0;
+        background-color: $violeta-op2;
+        width: 220px;
+        height: 200px;
+    }
+
+    .iconos-acciones-gif {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .iconos-acciones-box {
+        width: 32px;
+        height: 32px;
+        background-color: $blanco-op;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        border-radius: 6px;
+        border: none;
+    }
+
+    .favorito {
+        cursor: pointer;
+    }
+
+    .download {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .max {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .iconos-acciones-box:hover {
+        background-color: $blanco;
+    }
+
+    .textos-descripcion-gif-resultados {
+        position: absolute;
+        bottom: 30px;
+        left: 18px;
+    }
+
+    .user-gif-resultados {
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0;
+        margin-bottom: 6px;
+    }
+
+    .titulo-gif-resultados {
+        @include textos-mobile;
+        text-align: left;
+        color: $blanco;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resultados-gif-box:hover .gif-acciones-resultados {
+        display: block;
+    }
+
+    //boton VER MAS hover
+    .btn-generico:hover {
+        background-color: $violeta;
+        color: $blanco;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-header {
+        h1 {
+            font-size: 35px;
+            line-height: 50px;
+            padding: 76px 440px 24px 440px;
+        }
+
+        .buscador-contenedor {
+            img {
+                width: 399px;
+            }
+
+            .buscador {
+                width: 551px;
+            }
+        }
+
+        .trending-sugerencias {
+            margin-top: 73px;
+
+            h3 {
+                @include titulos;
+                font-size: 18px;
+            }
+
+            #trending-topics {
+                font-size: 16px;
+                padding-top: 7px;
+            }
+        }
+    }
+
+    //clases definidas para el buscador abierto
+    .buscador-activo {
+        width: 551px;
+    }
+
+    //estilos de la seccion RESULTADOS BUSQUEDA agregada con js
+    .resultados-busqueda-contenedor {
+        margin-top: 55px;
+    }
+
+    #titulo-busqueda {
+        padding-top: 81px;
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    .resultados-busqueda {
+        margin: 59px 146px 47px 146px;
+    }
+
+    .resultados-gif-box {
+        width: 260px;
+        height: 200px;
+        margin: 0 15px 31px 15px;
+    }
+
+    .gif-acciones-resultados {
+        width: 260px;
+        height: 200px;
+    }
+
+    .busqueda-error-contenedor {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .busqueda-error-img {
+        margin-top: 0;
+        width: 150px;
+    }
+
+    .busqueda-error-texto {
+        margin-top: 29px;
+        font-size: 22px;
+        line-height: 25px;
+    }
+}

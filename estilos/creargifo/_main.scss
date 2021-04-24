@@ -1,0 +1,373 @@
+.main-mobile {
+    margin: 20px auto;
+    h2 {
+        @include titulos;
+        font-size: 20px;
+        line-height: 25px;
+        padding: 0 25px;
+
+        .gifos-turquesa {
+            color: $turquesa;
+        }
+    }
+}
+
+.main-creargifo {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-mobile {
+        display: none;
+    }
+
+    .main-creargifo {
+        text-align: center;
+        display: block;
+
+        .ilus-grabar-contenedor {
+            display: flex;
+            margin: 4px 50px 0px 50px;
+
+            justify-content: center;
+
+            .div-camara {
+                width: 162px;
+                height: 390px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                #camara-ilustracion {
+                    width: 90px;
+                }
+
+                #luz-camara {
+                    width: 60px;
+                    padding-top: 5px;
+                    padding-left: 3px;
+                }
+            }
+
+            .div-grabacion {
+                .recuadro-grabacion {
+                    width: 600px;
+                    height: 390px;
+                    border: 1px solid $violeta;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .esquina1 {
+                        border-top: 1px solid $turquesa;
+                        border-left: 1px solid $turquesa;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                    }
+
+                    .esquina2 {
+                        border-top: 1px solid $turquesa;
+                        border-right: 1px solid $turquesa;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+
+                    .esquina3 {
+                        border-bottom: 1px solid $turquesa;
+                        border-left: 1px solid $turquesa;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                    }
+
+                    .esquina4 {
+                        border-bottom: 1px solid $turquesa;
+                        border-right: 1px solid $turquesa;
+                        width: 25px;
+                        height: 27px;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                    }
+
+                    .video-contenedor {
+                        width: 480px;
+                        height: 320px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        #titulo-grabargifo {
+                            //display: none;
+                            @include titulos;
+                            font-size: 25px;
+                            line-height: 35px;
+                            margin: 0 0 3px 0;
+
+                            .gifos-crear {
+                                color: $turquesa;
+                            }
+                        }
+
+                        #texto-grabargifo {
+                            @include textos-mobile;
+                            color: $negro;
+                            font-size: 16px;
+                            line-height: 29px;
+                            margin: 0;
+                        }
+
+                        .overlay-video {
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $violeta-op2;
+                            text-align: center;
+                            position: absolute;
+                            z-index: 5;
+
+                            #overlay-video-actions {
+                                display: none;
+                                position: absolute;
+                                top: 12px;
+                                right: 12px;
+
+                                #btn-creargifo-descargar {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 42px;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 6px;
+                                    border: none;
+                                    background-color: $blanco-op;
+                                    margin: 0;
+                                    cursor: pointer;
+                                }
+
+                                #btn-creargifo-descargar:hover {
+                                    background-color: $blanco;
+                                }
+
+                                #btn-creargifo-link {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 6px;
+                                    border: none;
+                                    background-color: $blanco-op;
+                                    margin: 0;
+                                    cursor: pointer;
+                                }
+
+                                #btn-creargifo-link:hover {
+                                    background-color: $blanco;
+                                }
+                            }
+
+                            #overlay-video-textos {
+                                display: flex;
+                                flex-direction: column;
+
+                                #overlay-video-icon {
+                                    margin: 0;
+                                }
+
+                                #overlay-video-parrafo {
+                                    font-family: $montse;
+                                    font-weight: 500;
+                                    font-size: 15px;
+                                    line-height: 19px;
+                                    color: $blanco;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+
+                        #grabacion-video {
+                            display: none;
+                            position: absolute;
+                            z-index: 1;
+                        }
+
+                        #gif-grabado {
+                            display: none;
+                            width: 480px;
+                            height: 320px;
+                            position: absolute;
+                            z-index: 2;
+                        }
+                    }
+                }
+
+                div {
+                    height: 75px;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+
+                    .crear-pasos {
+                        p {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            border: 1px solid $violeta;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 25px;
+
+                            font-family: $roboto;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: $violeta;
+                        }
+
+                        .paso-activo {
+                            background-color: $violeta;
+                            color: $blanco;
+                        }
+
+                        p:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .contador-contenedor {
+                        position: absolute;
+                        right: 0;
+
+                        #contador-grabacion {
+                            display: none;
+                            @include titulos;
+                            font-size: 15px;
+                            line-height: 22px;
+                            color: $violeta;
+                        }
+
+                        #contador-repetircaptura {
+                            display: none;
+                            @include titulos;
+                            font-size: 13px;
+                            line-height: 16px;
+                            text-transform: uppercase;
+                            background-color: unset;
+                            border: none;
+                            border-bottom: 2px solid $blanco;
+                            cursor: pointer;
+                        }
+
+                        #contador-repetircaptura:hover {
+                            border-bottom: 2px solid $turquesa;
+                        }
+                    }
+                }
+            }
+
+            .div-pelicula {
+                width: 162px;
+                height: 465px;
+                position: relative;
+
+                img {
+                    width: 100px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 15px;
+                }
+            }
+        }
+
+        .divisor-creargifo {
+            height: 7px;
+            width: 650px;
+            border-radius: 50px;
+            background-color: $violeta;
+            margin: 0 auto 20px;
+        }
+
+        .botones-creargifo-contenedor {
+            text-align: center;
+
+            #btn-creargifo-comenzar {
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+
+            #btn-creargifo-grabar {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+
+            #btn-creargifo-finalizar {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+
+            #btn-creargifo-subirgifo {
+                display: none;
+                font-weight: 600;
+                margin: 0 auto 26px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-creargifo {
+        .ilus-grabar-contenedor {
+            margin: 4px 156px 0px 156px;
+            justify-content: space-between;
+
+            .div-camara {
+                width: 220px;
+
+                #camara-ilustracion {
+                    width: 123px;
+                }
+
+                #luz-camara {
+                    width: 91px;
+                    padding-left: 5px;
+                }
+            }
+
+            .div-grabacion {
+                .recuadro-grabacion {
+                    width: 688px;
+                }
+            }
+
+            .div-pelicula {
+                width: 220px;
+                
+
+                img {
+                    width: 142px;
+                    
+                }
+            }
+        }
+
+        .divisor-creargifo {   
+            width: 795px;/*  */
+        }
+    }
+}
